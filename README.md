@@ -27,7 +27,7 @@ $ bundle
 Start the application:
 
 ```sh
-$ rackup
+$ foreman start
 ```
 
 ## Authors
@@ -43,4 +43,5 @@ Copyright (c) 2012 Andrew Garner. See LICENSE for details.
 [git]: http://git-scm.com/
 [ruby]: http://www.ruby-lang.org/
 [bundler]: http://gembundler.com/
+[foreman]: http://ddollar.github.com/foreman/
 [guillotine]: http://techno-weenie.net/guillotine/

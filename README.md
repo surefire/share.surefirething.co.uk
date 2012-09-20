@@ -1,6 +1,6 @@
-# share.andrewgarner.com
+# share.surefirething.co.uk
 
-My very own URL shortener based on [guillotine].
+[SureFire's][surefire] very own URL shortener based on [guillotine].
 
 
 ## Usage
@@ -8,17 +8,17 @@ My very own URL shortener based on [guillotine].
 Shorten a URL:
 
 ```sh
-$ curl -X POST http://share.andrewgarner.com --user user:pass -i -F"url=https://github.com/andrewgarner/share.andrewgarner.com"
+$ curl -X POST http://share.surefirething.co.uk --user user:pass -i -F"url=https://github.com/surefire/share.surefirething.co.uk"
 ...
-Location: http://share.andrewgarner.com/o2pbXA
+Location: http://share.surefirething.co.uk/o2pbXA
 ```
 
 Shorten a URL with custom code:
 
 ```sh
-$ curl -X POST http://share.andrewgarner.com --user user:pass -i -F"url=https://github.com/andrewgarner/share.andrewgarner.com" -F"code=gh"
+$ curl -X POST http://share.surefirething.co.uk --user user:pass -i -F"url=https://github.com/surefire/surefirething.co.uk" -F"code=gh"
 ..
-Location: http://share.andrewgarner.com/gh
+Location: http://share.surefirething.co.uk/gh
 ```
 
 
@@ -34,7 +34,7 @@ Location: http://share.andrewgarner.com/gh
 Clone the repository:
 
 ```sh
-$ git clone andrewgarner:share.andrewgarner.com.git
+$ git clone git@github.com:surefire/share.surefirething.co.uk.git
 ```
 
 Install dependencies using [Bundler]:
@@ -54,9 +54,9 @@ $ foreman start
 Create a new [Heroku] application:
 
 ```sh
-$ heroku apps:create share-andrewgarner
-Creating share-andrewgarner... done, stack is cedar
-http://share-andrewgarner.herokuapp.com/ | git@heroku.com:share-andrewgarner.git
+$ heroku apps:create share-surefirething
+Creating share-surefirething... done, stack is cedar
+http://share-surefirething.herokuapp.com/ | git@heroku.com:share-surefirething.git
 Git remote heroku added
 ```
 
@@ -64,22 +64,22 @@ Configure the free [Redis To Go][redistogo] addon:
 
 ```sh
 $ heroku addons:add redistogo
-Adding redistogo on share-andrewgarner... done, v2 (free)
+Adding redistogo on share-surefirething... done, v2 (free)
 Use `heroku addons:docs redistogo` to view documentation.
 ```
 
 Configure a custom domain:
 
 ```sh
-$ heroku domains:add share.andrewgarner.com
-Adding share.andrewgarner.com to share-andrewgarner... done
+$ heroku domains:add share.surefirething.co.uk
+Adding share.surefirething.co.uk to share-surefirething... done
 ```
 
 Configure authentication:
 
 ```sh
 $ heroku config:add SHARE_USERNAME=user SHARE_PASSWORD=pass
-Setting config vars and restarting share-andrewgarner... done, v3
+Setting config vars and restarting share-surefirething... done, v3
 SHARE_USERNAME: pass
 SHARE_PASSWORD: user
 ```
@@ -118,8 +118,8 @@ Total 33 (delta 9), reused 0 (delta 0)
        Default types for Ruby/Rack -> console, rake
 -----> Compiled slug size: 11.7MB
 -----> Launching... done, v8
-       http://share-andrewgarner.herokuapp.com deployed to Heroku
-To git@heroku.andrewgarner:share-andrewgarner.git
+       http://share-surefirething.herokuapp.com deployed to Heroku
+To git@heroku.surefire:share-surefirething.git
  * [new branch]      master -> master
 ```
 
@@ -131,9 +131,10 @@ To git@heroku.andrewgarner:share-andrewgarner.git
 
 ## Copyright
 
-Copyright (c) 2012 Andrew Garner. See LICENSE for details.
+Copyright (c) 2012 SureFire. See LICENSE for details.
 
 
+[surefire]: http://surefirething.co.uk/
 [git]: http://git-scm.com/
 [ruby]: http://www.ruby-lang.org/
 [bundler]: http://gembundler.com/

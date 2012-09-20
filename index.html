@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>share.andrewgarner.com by andrewgarner</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>share.andrewgarner.com</h1>
+        <p>My very own URL shortener.</p>
+
+        <p class="view"><a href="https://github.com/andrewgarner/share.andrewgarner.com">View the Project on GitHub <small>andrewgarner/share.andrewgarner.com</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/andrewgarner/share.andrewgarner.com/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/andrewgarner/share.andrewgarner.com/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/andrewgarner/share.andrewgarner.com">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Usage</h2>
+
+<p>Shorten a URL:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>curl -X POST http://share.andrewgarner.com <span class="se">\</span>
+--user user:pass -i <span class="se">\</span>
+-F<span class="s2">"url=https://github.com/andrewgarner/share.andrewgarner.com"</span>
+...
+Location: http://share.andrewgarner.com/o2pbXA
+</pre></div>
+
+<p>Shorten a URL with custom code:</p>
+
+<div class="highlight"><pre><span class="nv">$ </span>curl -X POST http://share.andrewgarner.com <span class="se">\</span>
+--user user:pass -i <span class="se">\</span>
+-F<span class="s2">"url=https://github.com/andrewgarner/share.andrewgarner.com"</span> <span class="se">\</span>
+-F<span class="s2">"code=gh"</span>
+..
+Location: http://share.andrewgarner.com/gh
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/andrewgarner">andrewgarner</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

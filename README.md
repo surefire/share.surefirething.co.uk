@@ -3,6 +3,25 @@
 My very own URL shortener based on [guillotine].
 
 
+## Usage
+
+Shorten a URL:
+
+```sh
+$ curl -X POST http://share.andrewgarner.com --user user:pass -i -F"url=https://github.com/andrewgarner/share.andrewgarner.com"
+...
+Location: http://share.andrewgarner.com/o2pbXA
+```
+
+Shorten a URL with custom code:
+
+```sh
+$ curl -X POST http://share.andrewgarner.com --user user:pass -i -F"url=https://github.com/andrewgarner/share.andrewgarner.com" -F"code=gh"
+..
+Location: http://share.andrewgarner.com/gh
+```
+
+
 ## Requirements
 
 * [Git]

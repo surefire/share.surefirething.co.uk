@@ -10,6 +10,7 @@ GEM
     kgio (2.7.4)
     rack (1.4.1)
     raindrops (0.10.0)
+    redis (3.0.1)
     sinatra (1.2.8)
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
@@ -26,4 +27,5 @@ PLATFORMS
 DEPENDENCIES
   foreman
   guillotine
+  redis
   unicorn

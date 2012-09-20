@@ -8,7 +8,9 @@
 Shorten a URL:
 
 ```sh
-$ curl -X POST http://share.surefirething.co.uk --user user:pass -i -F"url=https://github.com/surefire/share.surefirething.co.uk"
+$ curl -X POST http://share.surefirething.co.uk -i \
+--user user:pass \
+-F"url=https://github.com/surefire/share.surefirething.co.uk"
 ...
 Location: http://share.surefirething.co.uk/o2pbXA
 ```
@@ -16,7 +18,10 @@ Location: http://share.surefirething.co.uk/o2pbXA
 Shorten a URL with custom code:
 
 ```sh
-$ curl -X POST http://share.surefirething.co.uk --user user:pass -i -F"url=https://github.com/surefire/surefirething.co.uk" -F"code=gh"
+$ curl -X POST http://share.surefirething.co.uk -i \
+--user user:pass \
+-F"url=https://github.com/surefire/surefirething.co.uk" \
+-F"code=gh"
 ..
 Location: http://share.surefirething.co.uk/gh
 ```

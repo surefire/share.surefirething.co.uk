@@ -21,4 +21,29 @@ class Share < Guillotine::App
     end
   end
 
+  before do
+    authenticate! unless request.get?
+  end
+
+  helpers do
+
+    def authenticate!
+      return if settings.development?
+      return if authenticated?
+
+      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+
+      throw :halt, [401, "Not authorized\n"]
+    end
+
+    def authenticated?
+      @auth ||= Rack::Auth::Basic::Request.new(request.env)
+      @auth.provided? &&
+        @auth.basic? &&
+        @auth.credentials &&
+        @auth.credentials == [ENV['SHARE_USERNAME'], ENV['SHARE_PASSWORD']]
+    end
+
+  end
+
 end

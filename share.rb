@@ -17,7 +17,7 @@ class Share < Guillotine::App
       redis   = Redis.new(url: ENV["REDISTOGO_URL"])
       adapter = Guillotine::RedisAdapter.new(redis)
 
-      Guillotine::Service.new(adapter)
+      Guillotine::Service.new(adapter, default_url: "http://andrewgarner.com")
     end
   end
 

@@ -136,7 +136,7 @@ To git@heroku.surefire:share-surefirething.git
 
 ## Copyright
 
-Copyright (c) 2012 SureFire. See LICENSE for details.
+Copyright (c) 2012 SureFire. See [LICENSE](LICENSE.md) for details.
 
 
 [surefire]: http://surefirething.co.uk/
